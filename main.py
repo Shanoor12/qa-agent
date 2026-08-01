@@ -1,4 +1,4 @@
-import json
+from services.jira_client import load_ticket
 
 
 # Dicrionary
@@ -30,13 +30,6 @@ import json
 
 
 # Functions
-
-import json
-
-
-def load_ticket():
-    with open("data/ticket.json", "r") as file:
-        return json.load(file)
 
 
 def display_ticket(ticket):
