@@ -1,4 +1,5 @@
 from services.jira_client import load_ticket
+from services.jira_client import load_tickets
 
 
 # Dicrionary
@@ -40,11 +41,28 @@ def display_ticket(ticket):
     print("Status      :", ticket["status"])
     print("Description :", ticket["description"])
     print("=================================")
+     
+
+
+def display_tickets(tickets):
+
+    for ticket in tickets:
+        print("\n========== JIRA TICKET ==========")
+        print("Ticket ID   :", ticket["key"])
+        print("Summary     :", ticket["summary"])
+        print("Priority    :", ticket["priority"])
+        print("Status      :", ticket["status"])
+        print("Description :", ticket["description"])
+        print("=================================")
+
+    
 
 
 def main():
     ticket = load_ticket()
+    tickets = load_tickets()
     display_ticket(ticket)
+    display_tickets(tickets)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,26 @@
+[
+  {
+    "key": "QA-101",
+    "summary": "Login functionality",
+    "description": "User should be able to login using email and password.",
+    "priority": "High",
+    "status": "To Do",
+    "assignee": "Shanoor"
+  },
+  {
+    "key": "QA-102",
+    "summary": "Forgot password",
+    "description": "User should receive a password reset email.",
+    "priority": "Medium",
+    "status": "In Progress",
+    "assignee": "Amit"
+  },
+  {
+    "key": "QA-103",
+    "summary": "Profile update",
+    "description": "User should update profile information.",
+    "priority": "Low",
+    "status": "Done",
+    "assignee": "Shanoor"
+  }
+]
