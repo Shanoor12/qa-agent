@@ -40,6 +40,7 @@ def display_ticket(ticket):
     print("Priority    :", ticket["priority"])
     print("Status      :", ticket["status"])
     print("Description :", ticket["description"])
+    print("assignee    :", ticket["assignee"])
     print("=================================")
      
 
@@ -67,6 +68,27 @@ def search_ticket(tickets):
             break
     if not found:
         print("ticket not found. ");     
+
+def search_by_priority(tickets):
+    priority = input("enter priority. ")
+    found = False
+    for ticket in tickets:
+        if ticket["priority"] == priority:
+            display_ticket(ticket)
+            found = True
+    if not found:
+        print("priority not found. ");
+
+def filter_by_assignee(tickets):
+    assignee = input ("Enter the assignee name. ")
+    found = False
+    for ticket in tickets:
+        if ticket["assignee"] == assignee:
+            display_ticket(ticket)
+            found = True
+    if not found:
+        print("No tickets found for this assignee.")    
+
     
 
 
@@ -76,6 +98,8 @@ def main():
     display_ticket(ticket)
     display_tickets(tickets)
     search_ticket(tickets)
+    search_by_priority(tickets)
+    filter_by_assignee(tickets)
 
 
 if __name__ == "__main__":

@@ -22,5 +22,16 @@
     "priority": "Low",
     "status": "Done",
     "assignee": "Shanoor"
+  },
+
+  {
+    "key": "QA-104",
+    "summary": "Login functionality",
+    "description": "User should be able to login using email and password.",
+    "priority": "High",
+    "status": "To Do",
+    "assignee": "Shanoor"
   }
+
+  
 ]
