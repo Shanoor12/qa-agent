@@ -55,6 +55,18 @@ def display_tickets(tickets):
         print("Description :", ticket["description"])
         print("=================================")
 
+        
+
+def search_ticket(tickets):
+    ticket_id = input("Enter Ticket ID: ")
+    found = False
+    for ticket in tickets:
+        if ticket["key"] == ticket_id:
+            display_ticket(ticket)
+            found = True
+            break
+    if not found:
+        print("ticket not found. ");     
     
 
 
@@ -63,6 +75,7 @@ def main():
     tickets = load_tickets()
     display_ticket(ticket)
     display_tickets(tickets)
+    search_ticket(tickets)
 
 
 if __name__ == "__main__":
